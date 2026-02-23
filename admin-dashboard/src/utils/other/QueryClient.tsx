@@ -18,4 +18,5 @@ function QueryClientPro() {
   );
 }
 
+
 export default QueryClientPro;
