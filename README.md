@@ -1,4 +1,4 @@
-# stockpile-backend-api
+# storepulse-lite-backend-api
 
 A minimal Node.js + Express backend scaffold that connects to MongoDB, exposes a simple `Item` model REST API, and includes Swagger (OpenAPI) documentation plus Docker Compose for local development.
 
