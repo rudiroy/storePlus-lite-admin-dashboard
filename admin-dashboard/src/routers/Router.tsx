@@ -1,10 +1,13 @@
-import { BrowserRouter, Routes } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LoginPage from "../components/login/LoginPage";
+import OTPPage from "../components/login/OTPPage";
 
 function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Routes go here */}
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/otp" element={<OTPPage />} />
       </Routes>
     </BrowserRouter>
   );

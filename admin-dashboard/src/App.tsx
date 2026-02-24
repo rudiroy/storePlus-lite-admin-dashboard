@@ -4,5 +4,4 @@ function App() {
   return <QueryClientPro />;
 }
 
-
 export default App;

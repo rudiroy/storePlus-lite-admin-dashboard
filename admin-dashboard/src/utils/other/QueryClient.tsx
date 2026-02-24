@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import ReactDOM from "react-dom";
+import { createPortal } from "react-dom";
 import Router from "../../routers/Router";
 import { Toaster } from "react-hot-toast";
 
@@ -12,11 +12,10 @@ function QueryClientPro() {
   return (
     <QueryClientProvider client={client}>
       <Router />
-      {ReactDOM.createPortal(<Toaster />, document.body)}
-      <ReactQueryDevtools />
+      {createPortal(<Toaster />, document.body)}
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
 }
-
 
 export default QueryClientPro;
