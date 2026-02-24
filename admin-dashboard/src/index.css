@@ -1,67 +1,46 @@
-/* Google Font: Poppins + Figtree (single import each) */
+/* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Figtree:wght@400;500;600;700&display=swap");
 
-/* Tailwind v4 style */
-@import "tailwindcss";
-@import "tw-animate-css";
-
-/* Enable Dark Mode Variant (Tailwind v4) */
-@custom-variant dark (&:where(.dark, .dark *));
-
-@layer base {
-  :root {
-    --color-theme: #111111;
-
-    /* Coral color palette */
-    --color-coral-50: #fff5f3;
-    --color-coral-100: #ffe8e3;
-    --color-coral-200: #ffd1c7;
-    --color-coral-300: #ffb09f;
-    --color-coral-400: #ff8066;
-    --color-coral-500: #ff7b7b;
-    --color-coral-600: #f04848;
-    --color-coral-700: #d63636;
-    --color-coral-800: #b12f2f;
-    --color-coral-900: #932b2b;
-  }
-
-  html,
-  body {
-    font-family: "Poppins", "Figtree", sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-
-  /* Full-height layouts */
-  html,
-  body,
-  #root {
-    height: 100%;
-    min-height: 100%;
-    background-color: #ffffff; /* no !important */
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Poppins", "Figtree", sans-serif;
-  }
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Client portal scroll + cursor helpers */
-.client-portal {
+/* Base styles */
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", "Figtree", sans-serif;
+  background-color: #ffffff;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+/* Links & buttons */
+a,
+button {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Optional scroll hide utility */
+.hide-scrollbar {
   overflow-y: auto;
   scrollbar-width: none; /* Firefox */
 }
 
-.client-portal::-webkit-scrollbar {
-  display: none; /* WebKit */
-}
-
-.client-portal a,
-.client-portal button {
-  cursor: pointer;
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
